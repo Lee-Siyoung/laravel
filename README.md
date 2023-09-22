@@ -37,6 +37,7 @@
 -   관계
 
     일대다 관계
+
     ![Alt text](image-2.png)
 
 ## 게시판 RESTful API
