@@ -2,9 +2,15 @@
 
 ## 구현 환경
 
+-   window 10
 -   Laravel : 10+
 -   PHP : 8.2.10
+-   nginx : 1.24
 -   Database : PostgreSQL
+
+### nginx + Laravel 구성 방법
+
+[노션 링크](https://lydian-opera-00c.notion.site/9-19-4395039683cb4d68a64ac87815ae2ca6?pvs=4)
 
 ## DB
 
@@ -48,10 +54,11 @@
 | PUT    | /board/:boardId/post/:postId | 포스트 수정      |
 | DELETE | /board/:boardId/:postId      | 포스트 삭제      |
 
-(Chrome 확장 프로그램 Talend API Tester로 테스트 시 http://localhost:8000/api/board/ 형식으로 해야함)
+(Chrome 확장 프로그램 Talend API Tester로 테스트 시 http://localhost/api/board/ 형식으로 해야함)
 
 [api 실행 테스트](https://github.com/Lee-Siyoung/laravel/blob/main/CRUD_TEST.md)
 
 ## 실행
 
-`php artisan serve`
+-   위치 nginx폴더에서 `nginx.exe`
+-   위치 php폴더에서 `php-cgi.exe -b 127.0.0.1:9000`

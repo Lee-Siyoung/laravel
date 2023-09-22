@@ -5,7 +5,7 @@
 ```
 {
   METHOD : POST
-  url : http://localhost:8000/api/board/
+  url : http://localhost/api/board/
   BODY : {"name":"게시판"}
 }
 
@@ -26,7 +26,7 @@
 ```
 {
   METHOD : GET
-  url : http://localhost:8000/api/board/
+  url : http://localhost/api/board/
 }
 
 -- 결과 값
@@ -45,7 +45,7 @@
 ```
 {
   METHOD : GET
-  url : http://localhost:8000/api/board/1
+  url : http://localhost/api/board/1
 }
 
 -- 결과 값
@@ -64,7 +64,7 @@
 ```
 {
   METHOD : PUT
-  url : http://localhost:8000/api/board/1
+  url : http://localhost/api/board/1
   body : {"name":"수정"}
 }
 
@@ -84,7 +84,7 @@
 ```
 {
   METHOD : DELETE
-  url : http://localhost:8000/api/board/1
+  url : http://localhost/api/board/1
 }
 
 -- 결과 값
@@ -99,7 +99,7 @@
 ```
 {
   METHOD : POST
-  url : http://localhost:8000/api/board/1/post
+  url : http://localhost/api/board/1/post
   BODY : {"name":"게시물", "detail":"내용"}
 }
 
@@ -122,7 +122,7 @@
 ```
 {
   METHOD : POST
-  url : http://localhost:8000/api/board/1/post
+  url : http://localhost/api/board/1/post
 }
 
 -- 결과 값
@@ -142,7 +142,7 @@
 ```
 {
   METHOD : POST
-  url : http://localhost:8000/api/board/1/post/1
+  url : http://localhost/api/board/1/post/1
 }
 
 -- 결과 값
@@ -162,7 +162,7 @@
 ```
 {
   METHOD : POST
-  url : http://localhost:8000/api/board/1/post/1
+  url : http://localhost/api/board/1/post/1
   body : {"name":"게시물수정", "detail":"내용수정"}
 }
 
@@ -183,7 +183,7 @@
 ```
 {
   METHOD : DELETE
-  url : http://localhost:8000/api/board/1/post/1
+  url : http://localhost/api/board/1/post/1
 }
 
 -- 결과 값
