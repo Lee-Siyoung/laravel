@@ -3,7 +3,6 @@
 use App\Http\Controllers\API\BoardController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\API\PersonController;
 use App\Http\Controllers\API\PostController;
 /*
 |--------------------------------------------------------------------------
@@ -34,13 +33,4 @@ Route::prefix('/board/{boardId}/post')->group(function(){
     Route::delete('/{postId}',[PostController::class, 'delete']);
     Route::get('/{postId}', [PostController::class, 'getById']);
     Route::put('/{postId}', [PostController::class, 'update']);
-});
-
-
-Route::prefix('/persons')->group(function () {
-    Route::get('/',[ PersonController::class, 'get']);
-    Route::post('/',[ PersonController::class, 'create']);
-    Route::get('/{id}',[ PersonController::class, 'getById']);
-    Route::put('/{id}',[ PersonController::class, 'update']);
-    Route::delete('/{id}',[ PersonController::class, 'delete']);
 });
