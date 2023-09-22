@@ -2,7 +2,7 @@
 
 ## 구현 환경
 
--   window 10
+-   window 11
 -   Laravel : 10+
 -   PHP : 8.2.10
 -   nginx : 1.24
