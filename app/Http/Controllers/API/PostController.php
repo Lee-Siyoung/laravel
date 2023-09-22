@@ -66,7 +66,7 @@ class PostController extends Controller
             $post = $board->posts()->find($postId);
 
             $post->delete();
-            return response()->json(["deleted" => true], 200);
+            return response()->json(["deleted" => true], 204);
         } catch (\Throwable $th) {
             return response()->json(['error' => $th->getMessage()], 500);
         }

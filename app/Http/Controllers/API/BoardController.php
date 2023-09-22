@@ -77,7 +77,7 @@ class BoardController extends Controller
 
             $board->delete();
 
-            return response()->json(["message" => "게시판이 삭제되었습니다."], 204); // 204 No Content 상태 코드
+            return response()->json(["deleted" => true], 204); // 204 No Content 상태 코드
         } catch (\Throwable $th) {
             return response()->json(['error' => $th->getMessage()], 500);
         }
