@@ -13,15 +13,11 @@ class Board extends Model
 
     protected $fillable = [
       'name',
-      'post',
     ];
 
-    protected $casts = [
-        'post' => 'json',
-    ];
+    public function post()
+{
+    return $this->hasMany(Post::class);
+}
 
-    public function posts()
-    {
-        return $this->hasMany(Post::class);
-    }
 }

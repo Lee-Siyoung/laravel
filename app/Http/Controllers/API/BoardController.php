@@ -27,7 +27,7 @@ class BoardController extends Controller
 
             $data['name'] = $request['name'];
             $board = Board::create($data);
-            return response()->json($board, 201); // 201 Created 상태 코드
+            return response()->json($board, 201); 
         } catch (\Throwable $th) {
             return response()->json(['error' => $th->getMessage()], 500);
         }
@@ -38,7 +38,7 @@ class BoardController extends Controller
         try {
             $board = Board::with('posts')->find($id);
             if (!$board) {
-                return response()->json(['error' => '게시판을 찾을 수 없습니다.'], 404); // 404 Not Found 상태 코드
+                return response()->json(['error' => '게시판을 찾을 수 없습니다.'], 404); 
             }
             return response()->json($board, 200);
         } catch (\Throwable $th) {
