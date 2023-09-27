@@ -2,11 +2,11 @@ import "./bootstrap";
 import { createApp } from "vue";
 
 import { createRouter, createWebHistory } from "vue-router";
-import BoardList from "./components/BoardList.vue";
-import App from "./components/App.vue";
-import BoardDetail from "./components/BoardDetail.vue";
-import PostCreate from "./components/PostCreate.vue";
-import PostDetail from "./components/PostDetail.vue";
+import App from "@/components/App.vue";
+import BoardList from "@/components/BoardList.vue";
+import BoardDetail from "@/components/BoardDetail.vue";
+import PostCreate from "@/components/PostCreate.vue";
+import PostDetail from "@/components/PostDetail.vue";
 const router = createRouter({
     history: createWebHistory(),
     routes: [
