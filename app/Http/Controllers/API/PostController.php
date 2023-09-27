@@ -9,7 +9,7 @@ use App\Models\Board;
 
 class PostController extends Controller
 {
-    public function get($boardId)
+    public function index($boardId)
     {
         try {
             $board = Board::find($boardId);
@@ -20,7 +20,7 @@ class PostController extends Controller
         }
     }
 
-    public function create(Request $request, $boardId)
+    public function store(Request $request, $boardId)
     {
         try {
             $board = Board::find($boardId);
@@ -34,7 +34,7 @@ class PostController extends Controller
         }
     }
 
-    public function getById($boardId, $postId)
+    public function show($boardId, $postId)
     {
         try {
             $board = Board::find($boardId);
@@ -59,7 +59,7 @@ class PostController extends Controller
         }
     }
 
-    public function delete($boardId, $postId)
+    public function destroy($boardId, $postId)
     {
         try {
             $board = Board::find($boardId);

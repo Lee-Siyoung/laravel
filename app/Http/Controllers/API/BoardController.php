@@ -8,7 +8,7 @@ use App\Models\Board;
 
 class BoardController extends Controller
 {
-    public function get()
+    public function index()
     {
         try {
             $board = Board::with('posts')->get();
@@ -18,7 +18,7 @@ class BoardController extends Controller
         }
     }
 
-    public function create(Request $request)
+    public function store(Request $request)
     {
         try {
             $request->validate([
@@ -33,7 +33,7 @@ class BoardController extends Controller
         }
     }
 
-    public function getById($id)
+    public function show($id)
     {
         try {
             $board = Board::with('posts')->find($id);
@@ -67,7 +67,7 @@ class BoardController extends Controller
         }
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         try {
             $board = Board::find($id);

@@ -20,17 +20,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::prefix('/board')->group(function(){
-    Route::get('/',[BoardController::class, 'get']);
-    Route::post('/',[BoardController::class, 'create']);
-    Route::delete('/{id}',[BoardController::class, 'delete']);
-    Route::get('/{id}', [BoardController::class, 'getById']);
+    Route::get('/',[BoardController::class, 'index']);
+    Route::post('/',[BoardController::class, 'store']);
+    Route::delete('/{id}',[BoardController::class, 'destroy']);
+    Route::get('/{id}', [BoardController::class, 'show']);
     Route::put('/{id}', [BoardController::class, 'update']);
 });
 
 Route::prefix('/board/{boardId}/post')->group(function(){
-    Route::get('/',[PostController::class, 'get']);
-    Route::post('/',[PostController::class, 'create']);
-    Route::delete('/{postId}',[PostController::class, 'delete']);
-    Route::get('/{postId}', [PostController::class, 'getById']);
+    Route::get('/',[PostController::class, 'index']);
+    Route::post('/',[PostController::class, 'store']);
+    Route::delete('/{postId}',[PostController::class, 'destroy']);
+    Route::get('/{postId}', [PostController::class, 'show']);
     Route::put('/{postId}', [PostController::class, 'update']);
 });
